@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PomodoroLofiPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RfH-7j-rUo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:21" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAK-Yf-kBQ">
+                                <rect key="frame" x="135" y="144" width="105" height="54.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="UlN-J2-n8o" userLabel="pomPlayerSV">
+                                <rect key="frame" x="57" y="618" width="261" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GB5-CN-jFd">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSm-4d-PH2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giO-40-XHq">
+                                        <rect key="frame" x="188" y="0.0" width="73" height="60"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rts-fU-VMQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RfH-7j-rUo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3jO-Sm-063"/>
+                            <constraint firstItem="UlN-J2-n8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4u7-M8-UQQ"/>
+                            <constraint firstItem="lAK-Yf-kBQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dZh-20-3nj"/>
+                            <constraint firstAttribute="bottom" secondItem="RfH-7j-rUo" secondAttribute="bottom" id="guj-wz-aRz"/>
+                            <constraint firstItem="lAK-Yf-kBQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="hIy-jS-Eii"/>
+                            <constraint firstAttribute="trailing" secondItem="RfH-7j-rUo" secondAttribute="trailing" id="ioG-ce-G4J"/>
+                            <constraint firstItem="lAK-Yf-kBQ" firstAttribute="centerX" secondItem="UlN-J2-n8o" secondAttribute="centerX" id="r1r-6b-8nn"/>
+                            <constraint firstItem="RfH-7j-rUo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vAi-ED-bvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UlN-J2-n8o" secondAttribute="bottom" constant="100" id="yoq-iX-prb"/>
+                            <constraint firstItem="lAK-Yf-kBQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="100" id="zTN-do-fdx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="GB5-CN-jFd" id="aoa-c4-IKc"/>
+                        <outlet property="startButton" destination="giO-40-XHq" id="C9H-8u-Zoa"/>
+                        <outlet property="timeLabel" destination="lAK-Yf-kBQ" id="nLD-oA-hoq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="115.27093596059113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1072" height="1418"/>
+    </resources>
+</document>
